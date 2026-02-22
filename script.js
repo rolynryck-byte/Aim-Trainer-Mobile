@@ -9,7 +9,8 @@ const jogadnv = document.getElementById("jogar-novamente");
 const placar = document.getElementById("placar");
 const trackbtn = document.getElementById("track");
 const rodapé = document.getElementById("footer-jogo");
-
+const computador = document.getElementById("PC");
+const painelver = document.getElementById("pc");
 let contatointerval, errointerval;
 let acertos = 0;
 let erros = 0;
@@ -37,6 +38,12 @@ function resetarPlacar() {
   document.getElementById("contador-acertos").innerText = 0;
   document.getElementById("contador-erros").innerText = 0;
 }
+
+// --- VERIFICAÇÃO DE PLATAFORMA ---
+
+computador.addEventListener("click", function () {
+  painelver.style.display = "none";
+});
 
 // --- MODO FLICK ---
 
@@ -114,7 +121,7 @@ resetar.addEventListener("click", function () {
   campo.innerHTML = "";
   campo.style.display = "none";
   resetar.style.display = "none";
-  teladif.style.display = "flex";
+  modos.style.display = "flex";
   perda.style.display = "none";
   placar.style.display = "none";
   jogadnv.style.display = "none";
@@ -132,4 +139,3 @@ jogadnv.addEventListener("click", function () {
     gerarAlvo();
   }
 });
-

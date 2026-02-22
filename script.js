@@ -114,7 +114,7 @@ resetar.addEventListener("click", function () {
   campo.innerHTML = "";
   campo.style.display = "none";
   resetar.style.display = "none";
-  modos.style.display = "flex";
+  teladif.style.display = "flex";
   perda.style.display = "none";
   placar.style.display = "none";
   jogadnv.style.display = "none";
@@ -132,3 +132,4 @@ jogadnv.addEventListener("click", function () {
     gerarAlvo();
   }
 });
+
